@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Engl-Woldist/static/css/main.112f6c18.css",
+    "main.js": "/Engl-Woldist/static/js/main.0b627a95.js",
+    "static/js/787.23123852.chunk.js": "/Engl-Woldist/static/js/787.23123852.chunk.js",
+    "index.html": "/Engl-Woldist/index.html",
+    "main.112f6c18.css.map": "/Engl-Woldist/static/css/main.112f6c18.css.map",
+    "main.0b627a95.js.map": "/Engl-Woldist/static/js/main.0b627a95.js.map",
+    "787.23123852.chunk.js.map": "/Engl-Woldist/static/js/787.23123852.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.112f6c18.css",
+    "static/js/main.0b627a95.js"
+  ]
+}
