@@ -1,17 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-// import Word from '../Components/Word/Word';
-// import './WordsList.css';
+import json from '../LocalStorage';
+import Word from '../Word/Word';
+import './WordsList.css';
 
 
 function WordsList(props) {
-	let ewaw = 10;
+	let [mStyle, setMStyle] = useState({})
+	let gapCalculateT = (gap) => {
+		return {
+			marginTop: props.fixedGapT + gap + "px"
+		}
+	}
+	let gapCalculateB = (gap) => {
+		return {
+			marginBottom: props.fixedGapB + gap + "px"
+		}
+	}
+
+	let newStyle = async () => {
+		setMStyle(Object.assign(await gapCalculateT(25), await gapCalculateB(25)))
+	}
+	newStyle()
 	return (
-		<div className='block'>
+		<div className='block center wordsList' style={mStyle}>
 			{
-				// json.map( e => {
-				// 	<Word word="" lvl=""/> // Треба стейт щоб перемальовувало і у локал стореджі зберігати тільки змінені.
-				// })і
+				json.map(e => (
+					<Word key={e.id} word={e.word} lvl={e.lvl} />
+				))
 			}
 		</div>
 	)

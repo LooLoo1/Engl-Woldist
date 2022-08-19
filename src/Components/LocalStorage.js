@@ -1015,7 +1015,7 @@ for (let i = 0; i < newArr.length; i += 3) {
 		id: newArr[i],
 		word: newArr[i + 1],
 		translate: "",
-		know: 0
+		lvl: 0
 
 	}
 	json.push(template)
@@ -1031,3 +1031,5 @@ for (let i = 0; i < newArr.length; i += 3) {
 // 	})
 
 // }
+
+export default json

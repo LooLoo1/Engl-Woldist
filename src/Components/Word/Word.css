@@ -1,0 +1,1 @@
+.wordItem{display:flex;justify-content:space-between;align-items:center;border-radius:calc(var(--border-r)/5*3);transition:all .5s linear;cursor:pointer}.wordItem:hover{background-color:rgba(0,0,0,.15)}

@@ -1,0 +1,56 @@
+.levelIcon{
+	--size:calc(var(--border-r) / 5 * 6);
+	width: var(--size) !important;
+	height: var(--size) !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	div{
+		width: calc(var(--border-r)/5);
+		border-radius: calc(var(--size)/15);
+		border: solid 1px var(--black);
+		height: 66%;
+		background-color: red;
+	}
+	div:first-child{
+		height: 33%;
+	}
+	div:last-child{
+		height: 100%;
+	}
+	&[lvl="0"]{
+		div{
+			background-color: transparent;
+		}
+	}
+	&[lvl="1"]{
+		div{
+			background-color: transparent;
+		}
+		div:first-child{
+			background-color: var(--black);
+		}
+	}
+	&[lvl="2"]{
+		div{
+			background-color: var(--black);
+		}
+		div:last-child{
+			background-color: transparent;
+		}
+	}
+	&[lvl="3"]{
+		div{
+			background-color: var(--black);
+		}
+	}
+	&:not([lvl="0"]):not([lvl="1"]):not([lvl="2"]):not([lvl="3"]){
+		div{
+			background-color: red;
+		}
+	}
+}
+
+button .levelIcon{
+	filter: invert(100%);
+}

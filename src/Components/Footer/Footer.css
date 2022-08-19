@@ -1,0 +1,1 @@
+footer{position:fixed;width:inherit;bottom:0;display:flex;justify-content:center;align-items:center}footer *:not(:last-child){margin-right:calc(var(--border-r)/5*4)}

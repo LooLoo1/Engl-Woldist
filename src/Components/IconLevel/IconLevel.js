@@ -1,9 +1,9 @@
 import React from 'react'
-// import './IconLevel.css';
+import './IconLevel.css';
 
 function IconLevel(props) {
   return (
-	 <div>
+	 <div className='levelIcon' lvl={props.lvl}>
 		<div></div>
 		<div></div>
 		<div></div>

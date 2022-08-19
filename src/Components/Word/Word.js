@@ -1,11 +1,13 @@
 import React from 'react'
 import './Word.css';
+import IconLevel from '../IconLevel/IconLevel';
+
 
 function Word(props) {
 	return (
-		<div className=''>
-			<h2>All the words</h2>
-			
+		<div className='wordItem'>
+			<h2>{props.word}</h2>
+			<IconLevel lvl={props.lvl} />
 		</div>
 	)
 }

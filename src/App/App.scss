@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&family=Open+Sans:wght@400;600&display=swap');
+// font-family: 'Nunito', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+
+
 :root{
 	--conteiner-bg: #F3EDED;
 	--black: #000;
@@ -14,6 +19,7 @@
 
 
 .conteiner{
+	position: relative;
 	width: 428px;
 	margin: 0 auto;
 	// box-shadow: 0px 0px 35px rgba(255, 255, 255, 1);
@@ -22,16 +28,56 @@
 }
 
 .block{
-	padding: var(--border-r) 30px;
+	padding: var(--border-r) calc(var(--border-r) / 5 * 6);
 	background: var(--white);
 	box-shadow: var(--shadow);
 	border-radius: var(--border-r);
+	&.center > *:not(:last-child){
+		margin-bottom: calc(var(--border-r) / 5 * 3);
+	}
+	&.top{
+		border-radius: 0px 0px var(--border-r) var(--border-r);
+	}
+	&.bottom{
+		border-radius: var(--border-r) var(--border-r) 0px 0px ;
+	}
 }
 
-.block.top{
-	border-radius: 0px 0px var(--border-r) var(--border-r);
+// .block.top{
+// 	border-radius: 0px 0px var(--border-r) var(--border-r);
+// }
+
+// .block.bottom{
+// 	border-radius: var(--border-r) var(--border-r) 0px 0px ;
+// }
+
+h1,h2,h3,h4{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: var(--black);
+}
+h1.bold,h2.bold,h3.bold,h4.bold{
+	font-weight: 600;
+}
+h1{
+	font-size: 36px;
+}
+h2{
+	font-size: 32px;
+}
+h3{
+	font-size: 28px;
+}
+h4{
+	font-size: 24px;
 }
 
-.block.bottom{
-	border-radius: var(--border-r) var(--border-r) 0px 0px ;
+button p{
+	font-family: 'Nunito', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	color: var(--black);
+
+	text-shadow: 0px 0px 0.25em rgba(255, 255, 255, 0.25);
 }
