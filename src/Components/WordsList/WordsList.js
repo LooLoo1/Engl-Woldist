@@ -19,7 +19,7 @@ function WordsList(props) {
 	}
 
 	let newStyle = async () => {
-		setMStyle(Object.assign(await gapCalculateT(25), await gapCalculateB(25)))
+		setMStyle(Object.assign(await gapCalculateT(25), await gapCalculateB(0)))
 	}
 	newStyle()
 	return (

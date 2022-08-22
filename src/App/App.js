@@ -1,27 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom'
 import './App.css';
-import Header from '../Components/Header/Header';
-import WordsList from '../Components/WordsList/WordsList';
-import Footer from '../Components/Footer/Footer';
+import Main from '../Components/Pages/Main/Main';
+import Simulator from '../Components/Pages/Simulator/Simulator';
+import Error from '../Components/Pages/Error/Error';
 
 function App() {
-	let [calcGapT, setCalcGapT] = useState(0)
-	let [calcGapB, setCalcGapB] = useState(0)
 
-
-	let wordListGapTop = (e) => {
-		setCalcGapT(() => { return e.current.clientHeight })
-	}
-	let wordListGapBottom = (e) => {
-		setCalcGapB(() => { return e.current.clientHeight })
-	}
 
 	return (
-		<div className='conteiner'>
-			<Header calcHeight={(e) => { wordListGapTop(e) }} />
-			<WordsList fixedGapT={calcGapT} fixedGapB={calcGapB}></WordsList>
-			<Footer calcHeight={(e) => { wordListGapBottom(e) }} footerH={calcGapB} />
-		</div>
+		< >
+			<Router>
+				<Routes>
+					{/* <Route exact path='/' element={<Main/>} /> */}
+					<Route exact path='/Engl-Woldist' element={<Main/>} />
+					{/* <Route exact path='/:simulatorName' element={<Simulator/>} /> */}
+					<Route exact path='/Engl-Woldist/:simulatorName' element={<Simulator/>} />
+					<Route exact path='*' element={<Error/>} />
+				</Routes>
+			</Router>
+		</>
 	);
 }
 
